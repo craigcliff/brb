@@ -9,3 +9,19 @@
     </div>
   </section>
 </template>
+
+<script>
+export default{
+  data () {
+    return {
+      checked: false
+    }
+  },
+  methods:{
+    toggleShow() {
+      this.checked = !this.checked;
+    }
+    
+  }
+  }
+</script>

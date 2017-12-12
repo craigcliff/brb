@@ -1,6 +1,9 @@
 <template>
-<header class="header">
 
+<header class="header">
+ 
+      <div class= "header__images-1">
+        </div>
 
  </header>
 </template>
@@ -9,11 +12,12 @@
 <style lang="scss">
 
 
-.header {
-    height: 100Vh;
-    
-       
-    background-image: linear-gradient(
+
+
+   .header__images-1{
+height: 100Vh;
+
+ background-image: linear-gradient(
         to right bottom,
         rgba(222, 221, 221, 0.3),
         rgba(216,43, 43, 0.2)),
@@ -27,10 +31,19 @@
             only screen and (min-width: 125em) {
         background-image: linear-gradient(
             to right bottom,
-            rgba(0, 255, 0, 0.8),
-        rgba(0, 0, 255, 0.8));
+        rgba(222, 221, 221, 0.3),
+        rgba(216,43, 43, 0.2)),
+        url(../assets/images/bg-1.jpg);
+
+
+    }
+
+        
 }
 
-}
 
 </style>
+
+<script>
+
+</script>
