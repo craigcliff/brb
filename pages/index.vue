@@ -15,8 +15,9 @@
        
     background-image: linear-gradient(
         to right bottom,
-        rgba(0, 255, 0, 0.8),
-        rgba(0, 0, 255, 0.8));
+        rgba(222, 221, 221, 0.3),
+        rgba(216,43, 43, 0.2)),
+        url(../assets/images/bg-1.jpg);
     background-size: cover;
     background-position: top;
     position: relative;

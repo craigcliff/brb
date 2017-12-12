@@ -2,9 +2,11 @@
 <div class="navigation">
             
    
-                      
+                    
 
             <nav  class="navigation__nav"  >
+
+            <div class="navigation__logo">logo</div>
                 <ul  class="navigation__list"  >
 
                  
@@ -31,52 +33,43 @@ export default{
 </script>
 
 <style lang="scss">
-
 .navigation{
+width: 100%;
+height: 50px;
 
-   max-width: 1000px;
-  margin: 0 auto;
-  width: 100%;
+   position: absolute;
+   z-index: 3000;
 
-  &__nav {
-    
-       
-         position: fixed;
-    width: 100%;
-        z-index: 1500;
-    
-    
-        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
+   &__logo{
+float: left;
+padding-top: 10px;
+padding-left: 40px;
 
-    &__list{
- display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
- -webkit-flex-flow: row ;
-  -moz-flex-flow: row ;
-  -ms-flex-flow: row ;
-  flex-flow: row;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-  align-content: flex-end; 
+   }
+
+&__list{
+
+float: right;
+
 }
 
-    
-    &__item{
+&__item{
+  
+display: inline-block;
+padding-right: 80px;
+padding-top: 20px;
+text-decoration: none;
+font-weight: bold;
+color: white;
 
-      -webkit-box-flex: 0 1 50%;
-  -moz-box-flex: 0 1 50%;
-  -webkit-flex: 0 1 50%;
-  -ms-flex: 0 1 50%;
-  flex: 0 1 50%;
 
-padding-left: 15px;
-    }
 }
 
+&__link{
+color: white;
 
+}
+
+  
+}
 </style>
