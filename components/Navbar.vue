@@ -48,6 +48,16 @@ export default{
 .navigation{
 
 
+   @include respond(tab-port) {
+      background-color: rgba(222, 221, 221, 0.3);
+         height: 40px;
+        }
+        @include respond(phone) {
+          background-color: rgba(222, 221, 221, 0.3);
+          height: 40px;
+        }
+
+
 width: 100%;
 height: 50px;
 
@@ -58,7 +68,7 @@ height: 50px;
         display: none;
     }
     &__button {
-        background-color: rgba(222, 221, 221, 0.3);
+      
         height: 5rem;
         width: 5rem;
         position: fixed;
@@ -89,13 +99,17 @@ height: 50px;
 
   &__nav{
 
-
+  
 
  @include respond(tab-port) {
+        background-color: rgba(0, 0, 0, 0.3);
          display: none;
+         transition: all 2s ease;
         }
         @include respond(phone) {
+          background-color: rgba(0, 0, 0, 0.3);
            display: none;
+           transition: all 2s ease;
         }
 
   }
@@ -144,7 +158,8 @@ color: white;
           display: block;
           text-align: center;
           padding: 0;
-          padding-bottom: 20px;
+          padding-top: 30px;
+        
          
        
         }
@@ -152,7 +167,8 @@ color: white;
            display: block;
           text-align: center;
       padding: 0;
-          padding-bottom: 20px;
+      padding-top: 30px;
+         
         }
 
 }
@@ -166,10 +182,13 @@ color: white;
          @include respond(tab-port) {
          display: inline-block;
          width: 100%;
+         
+      
         }
         @include respond(phone) {
            display: inline-block;
            width: 100%;
+           
         }
 
   }
