@@ -104,16 +104,17 @@ height: 50px;
   
 
  @include respond(tab-port) {
-        background-color: rgba(0, 0, 0, 0.3);
-         display: none;
-         transition: all 2s ease;
+   transition: all 0.5s ease;
+       opacity: 0;
+  visibility: hidden;
+         
          z-index:1;
          
         }
         @include respond(phone) {
-          background-color: rgba(0, 0, 0, 0.3);
-           display: none;
-           transition: all 2s ease;
+              transition: all 0.5s ease;
+         opacity: 0;
+  visibility: hidden;
             z-index:1;
         }
 
@@ -194,17 +195,22 @@ color: white;
 
   &__checkbox:checked ~ &__nav {
          @include respond(tab-port) {
-         display: block;
+        background-color: rgba(0, 0, 0, 0.3);
+         visibility: visible;
+  opacity: 1;
+        
          width: 100%;
-         
+        
          
          
       
         }
         @include respond(phone) {
-           display: block;
+        background-color: rgba(0, 0, 0, 0.3);
+            visibility: visible;
+  opacity: 1;
            width: 100%;
-           
+         
         }
 
   }
