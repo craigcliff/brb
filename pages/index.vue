@@ -2,8 +2,21 @@
 
 <header class="header">
  
-      <div class= "header__images-1">
-        </div>
+      
+<div class="header__text-box">
+                <h1 class="heading-primary">
+                
+                    <span class="heading-primary--sub">TEXT TEXT TEXT</span>
+                   
+                    <span class="heading-primary--main">TEXT</span>
+                    <span class="heading-primary--main">TEXT</span>
+                    <span class="heading-primary--sub">TEXT TEXT TEXT</span>
+                </h1>
+
+                
+            </div>
+
+       
 
  </header>
 </template>
@@ -14,7 +27,7 @@
 
 
 
-   .header__images-1{
+   .header{
 height: 100Vh;
 
  background-image: linear-gradient(
@@ -36,6 +49,14 @@ height: 100Vh;
         url(../assets/images/bg-1.jpg);
 
 
+    }
+
+     &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
     }
 
         
