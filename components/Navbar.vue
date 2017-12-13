@@ -50,11 +50,13 @@ export default{
 
    @include respond(tab-port) {
       background-color: rgba(222, 221, 221, 0.3);
-         height: 40px;
+         height: 50px;
+         z-index: 2;
         }
         @include respond(phone) {
           background-color: rgba(222, 221, 221, 0.3);
-          height: 40px;
+          height: 50px;
+           z-index: 2;
         }
 
 
@@ -105,11 +107,14 @@ height: 50px;
         background-color: rgba(0, 0, 0, 0.3);
          display: none;
          transition: all 2s ease;
+         z-index:1;
+         
         }
         @include respond(phone) {
           background-color: rgba(0, 0, 0, 0.3);
            display: none;
            transition: all 2s ease;
+            z-index:1;
         }
 
   }
@@ -136,6 +141,9 @@ float: right;
 
  @include respond(tab-port) {
           float: none;
+          
+         
+          
         
         }
         @include respond(phone) {
@@ -149,16 +157,21 @@ float: right;
   
 display: inline-block;
 padding-right: 80px;
-padding-top: 20px;
+margin-top: 20px;
 text-decoration: none;
 font-weight: bold;
 color: white;
 
+
+
   @include respond(tab-port) {
           display: block;
           text-align: center;
-          padding: 0;
-          padding-top: 30px;
+       padding: 0;
+      padding-top: 30px;
+         margin-top:25px;
+         padding-bottom: 10px;
+         
         
          
        
@@ -168,6 +181,7 @@ color: white;
           text-align: center;
       padding: 0;
       padding-top: 30px;
+      
          
         }
 
@@ -180,13 +194,15 @@ color: white;
 
   &__checkbox:checked ~ &__nav {
          @include respond(tab-port) {
-         display: inline-block;
+         display: block;
          width: 100%;
+         
+         
          
       
         }
         @include respond(phone) {
-           display: inline-block;
+           display: block;
            width: 100%;
            
         }
