@@ -12,16 +12,11 @@
 
 <script>
 export default{
-  data () {
-    return {
-      checked: false
-    }
-  },
-  methods:{
-    toggleShow() {
-      this.checked = !this.checked;
-    }
-    
-  }
+ 
+ mounted: function(){
+   console.log("hello there");
+
+
+ }
   }
 </script>
