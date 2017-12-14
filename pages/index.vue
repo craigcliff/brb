@@ -158,7 +158,7 @@
 	left:0;
 	width:100%;
 	height:100%;
-    	z-index:-2;
+    	z-index:-6;
 
     @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
             only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
