@@ -7,16 +7,15 @@
 
 <div class="header__text-box">
                 <h1 class="heading-primary">
-                <transition name="fadeOne">
+                
                     <span class="heading-primary--sub container"v-show="show">TEXT TEXT TEXT</span>
-                   </transition>
-                   <transition name="fadeTwo">
+        
                        <div class="container" v-show="show">
                     <span class="heading-primary--main" >TEXT</span>
                     <span class="heading-primary--main" >TEXT</span>
                     <span class="heading-primary--sub">TEXT TEXT TEXT</span>
                     </div>
-                         </transition>
+                       
 
 
             </h1>
@@ -28,55 +27,7 @@
 
 <style lang="scss">
 
-#demo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-#demo span {
-  font-size: 10vw;
-  font-weight: 400;
-}
-.color-1 {
-  color: #ff6347;
-}
-.color-2 {
-  color: #bada55;
-}
-.color-3 {
-  color: #ff1493;
-}
-.color-4 {
-  color: #09a;
-}
 
-
-.fadeOne-enter-active, .fadeOne-leave-active {
-  transition: all .5s ease-out;
-}
-.fadeOne-enter, .fadeOne-leave-to {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
-  transform: translate(0%, 100%);
-}
-
-.fadeTwo-enter-active, .fadeTwo-leave-active {
-  transition: all .5s ease-out;
-}
-.fadeTwo-enter, .fadeTwo-leave-to {
-  clip-path: polygon(0% 100%, 100% 100%, 0% 100%, 0% 100%);
-  transform: translate(0%, -100%);
-}
 
 
    .header{
@@ -178,10 +129,11 @@
 
      &__text-box {
         position: absolute;
-        top: 40%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        opacity:0;
     }
 
         
@@ -197,9 +149,7 @@
 export default{
       data () {
     return {
-      show: false,
-      text: ['H', 'E', 'L', 'L', 'O'],
-      text2: 'Hello'
+      show: false
     }
   },
  
@@ -209,26 +159,29 @@ export default{
 
 
 
-	var fade_speed = 3.5; /* in seconds (you can edit this) */
-	var pause_length = 5; /* time each image is shown, in seconds (you can edit this) */
+	var fade_speed = 0.5; /* in seconds (you can edit this) */
+	var pause_length = 2; /* time each image is shown, in seconds (you can edit this) */
 
     var bgdiv2 = document.getElementsByClassName("header__bg2");
 
     var bgdiv3 = document.getElementsByClassName("header__bg3");
+    var headertext = document.getElementsByClassName("header__text-box");
     console.log(bgdiv2);
 	var tl = new TimelineMax({repeat:-1});
 	var tlint = '+=' + pause_length;
+    var tlint2 = '+=' + pause_length - 2;
+    tl.to(headertext, fade_speed, {opacity:1,scale:1.2}, tlint);
+     tl.to(headertext, fade_speed, {opacity:0,scale:1 }, tlint);
 	tl.to(bgdiv2, fade_speed, {opacity:1}, tlint); /* fade the 2nd background in */
+ tl.to(headertext, fade_speed, {opacity:1,scale:1.2,ease:Power3.easeIn}, tlint);
+     tl.to(headertext, fade_speed, {opacity:0,scale:1,ease:Power3.easeOut}, tlint);
 	 tl.to(bgdiv3, fade_speed, {opacity:1}, tlint);
+      tl.to(headertext, 5, {opacity:1,scale:1.2,ease:Bounce.easeIn}, tlint);
+     tl.to(headertext, 5, {opacity:0,scale:1.2,ease:Bounce.easeOut}, tlint);
     tl.to(bgdiv2, fade_speed, {opacity:0}, tlint); /* and then fade it back out again */
    
     tl.to(bgdiv3, fade_speed, {opacity:0}, tlint);
-  TweenMax.staggerFrom(
-  this.text2, 
-  0.25, 
-  { opacity:0, y: 200, ease: Back.easeOut },
-  0.08
-);
+
 
  }
   }
