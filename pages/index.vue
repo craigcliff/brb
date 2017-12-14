@@ -87,7 +87,8 @@
  background-image: linear-gradient(
         to right bottom,
         rgba(222, 221, 221, 0.3),
-        rgba(216,43, 43, 0.2));
+        rgba(216,43, 43, 0.2)),
+        url(../assets/images/bg-1.jpg);
     background-size: cover;
     background-position: top;
     position:fixed;
@@ -95,7 +96,7 @@
 	left:0;
 	width:100%;
 	height:100%;
-    	z-index:-2;
+    	z-index:-6;
 
     @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
             only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
@@ -150,7 +151,7 @@
         to right bottom,
         rgba(222, 221, 221, 0.3),
         rgba(216,43, 43, 0.2)),
-        url(../assets/images/bg-1.jpg);
+        url(../assets/images/bg-3.jpg);
     background-size: cover;
     background-position: top;
     position:fixed;
@@ -158,7 +159,8 @@
 	left:0;
 	width:100%;
 	height:100%;
-    	z-index:-6;
+    opacity: 0;
+    	z-index:-2;
 
     @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
             only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
@@ -207,16 +209,20 @@ export default{
 
 
 
-	var fade_speed = 1.5; /* in seconds (you can edit this) */
+	var fade_speed = 3.5; /* in seconds (you can edit this) */
 	var pause_length = 5; /* time each image is shown, in seconds (you can edit this) */
 
     var bgdiv2 = document.getElementsByClassName("header__bg2");
+
+    var bgdiv3 = document.getElementsByClassName("header__bg3");
     console.log(bgdiv2);
 	var tl = new TimelineMax({repeat:-1});
 	var tlint = '+=' + pause_length;
 	tl.to(bgdiv2, fade_speed, {opacity:1}, tlint); /* fade the 2nd background in */
-	tl.to(bgdiv2, fade_speed, {opacity:0}, tlint); /* and then fade it back out again */
-
+	 tl.to(bgdiv3, fade_speed, {opacity:1}, tlint);
+    tl.to(bgdiv2, fade_speed, {opacity:0}, tlint); /* and then fade it back out again */
+   
+    tl.to(bgdiv3, fade_speed, {opacity:0}, tlint);
   TweenMax.staggerFrom(
   this.text2, 
   0.25, 
