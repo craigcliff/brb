@@ -24,7 +24,7 @@ module.exports = {
     head: {
         title: 'brb',
         script: [
-            { src: 'assets/js/TweenMax.min.js' }
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js' }
         ],
         meta: [
             { charset: 'utf-8' },
