@@ -6,7 +6,31 @@
         <div class = "header__bg3"> </div>
 
 <div class="header__text-box">
-                <h1 class="heading-primary">
+                <h1 class="heading-primary" style="background-image: linear-gradient(
+        to right bottom,
+        rgba(222, 221, 221, 0.3),
+        rgba(216,43, 43, 0.2)),
+        url(../assets/images/bg-1.jpg);
+    background-size: cover;
+    background-position: top;
+    position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+    	z-index:-6;
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+            only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+            only screen and (min-width: 125em) {
+        background-image: linear-gradient(
+            to right bottom,
+        rgba(222, 221, 221, 0.3),
+        rgba(216,43, 43, 0.2));
+
+
+    }"
+                >
                 
                     <span class="heading-primary--sub container"v-show="show">TEXT TEXT TEXT</span>
         
