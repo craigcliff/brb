@@ -1,12 +1,13 @@
 <template>
 
 <header class="header">
- <div class = "header__bg1"> </div>
+ <div class = "header__bg1" > </div>
   <div class = "header__bg2"> </div>
         <div class = "header__bg3"> </div>
 
 <div class="header__text-box">
-                <h1 class="heading-primary">
+                <h1 class="heading-primary" 
+                >
                 
                     <span class="heading-primary--sub container"v-show="show">TEXT TEXT TEXT</span>
         
@@ -55,7 +56,8 @@
         background-image: linear-gradient(
             to right bottom,
         rgba(222, 221, 221, 0.3),
-        rgba(216,43, 43, 0.2));
+        rgba(216,43, 43, 0.2)),
+        url(../assets/images/bg-1.jpg);
 
 
     }
