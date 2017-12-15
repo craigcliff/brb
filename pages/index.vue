@@ -57,7 +57,7 @@
             to right bottom,
         rgba(222, 221, 221, 0.3),
         rgba(216,43, 43, 0.2)),
-        url(../assets/images/bg-1-mob.jpg);
+        url(../assets/images/bg-1.jpg);
 
 
     }
