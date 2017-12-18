@@ -27,15 +27,8 @@
 
 
 <style lang="scss">
-
-
-
-
    .header{
-
-
    &__bg1{
-
  background-image: linear-gradient(
         to right bottom,
         rgba(222, 221, 221, 0.3),
@@ -49,7 +42,6 @@
 	width:100%;
 	height:100%;
     	z-index:-6;
-
     @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
             only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
             only screen and (min-width: 125em) {
@@ -58,13 +50,9 @@
         rgba(222, 221, 221, 0.3),
         rgba(216,43, 43, 0.2)),
         url(../assets/images/bg-1.jpg);
-
-
     }
    }
-
     &__bg2 {height: 100Vh;
-
  background-image: linear-gradient(
         to right bottom,
         rgba(222, 221, 221, 0.3),
@@ -79,7 +67,6 @@
 	height:100%;
     opacity: 0;
 	z-index:-3;
-
     @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
             only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
             only screen and (min-width: 125em) {
@@ -88,18 +75,9 @@
         rgba(222, 221, 221, 0.3),
         rgba(216,43, 43, 0.2)),
         url(../assets/images/bg-1.jpg);
-
-
     }
-
-
-
-
-
    }
-
 &__bg3{
-
  background-image: linear-gradient(
         to right bottom,
         rgba(222, 221, 221, 0.3),
@@ -114,7 +92,6 @@
 	height:100%;
     opacity: 0;
     	z-index:-2;
-
     @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
             only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
             only screen and (min-width: 125em) {
@@ -123,12 +100,8 @@
         rgba(222, 221, 221, 0.3),
         rgba(216,43, 43, 0.2)),
         url(../assets/images/bg-1.jpg);
-
-
     }
    }
-
-
      &__text-box {
         position: absolute;
         top: 55%;
@@ -137,14 +110,8 @@
         text-align: center;
         opacity:0;
     }
-
         
 }
-
-
-
-
-
 </style>
 
 <script>
@@ -158,14 +125,9 @@ export default{
  mounted: function(){
    
   this.show = true;
-
-
-
 	var fade_speed = 0.5; /* in seconds (you can edit this) */
 	var pause_length = 2; /* time each image is shown, in seconds (you can edit this) */
-
     var bgdiv2 = document.getElementsByClassName("header__bg2");
-
     var bgdiv3 = document.getElementsByClassName("header__bg3");
     var headertext = document.getElementsByClassName("header__text-box");
     console.log(bgdiv2);
@@ -183,8 +145,6 @@ export default{
     tl.to(bgdiv2, fade_speed, {opacity:0}, tlint); /* and then fade it back out again */
    
     tl.to(bgdiv3, fade_speed, {opacity:0}, tlint);
-
-
  }
   }
 </script>
