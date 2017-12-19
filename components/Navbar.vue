@@ -1,5 +1,5 @@
 <template>
-<div class="navigation">
+<div class="navigation" v-bind:class="{on: active}">
              <input type="checkbox" class="navigation__checkbox" id="nav-check" v-model="checked">
 
             <label for="nav-check" class="navigation__button"   >
@@ -14,7 +14,15 @@
                 <ul  class="navigation__list" @click="toggleShow"  >
 
                  
-                  <li class="navigation__item"><nuxt-link class="navigation__link"  to="/">Home</nuxt-link></li>
+                  <li @mouseover="mouseOver " @mouseleave="mouseLeave" class="navigation__item"><nuxt-link class="navigation__link"  to="/">Home</nuxt-link>
+                  
+                   <div @mouseover="mouseOver" @mouseleave="mouseLeave" class = "navigation__item-sub">
+					   <h1> Hello there</h1>
+				      </div>
+                  
+                  
+                  </li>
+
                   <li class="navigation__item"><nuxt-link class="navigation__link"  to="/about">About</nuxt-link></li>
                   <li class="navigation__item"><nuxt-link class="navigation__link" to="/projects">Projects</nuxt-link></li>
                   <li class="navigation__item"><nuxt-link class="navigation__link"  to="/contact">Contact</nuxt-link></li>
@@ -31,21 +39,38 @@ export default{
   data () {
     return {
       showNav: false,
-      checked: false
+      checked: false,
+        active: false
     }
   },
 
   methods:{
     toggleShow() {
       this.checked = !this.checked;
-    }
+    },
+ mouseOver: function() {
+      this.active = true;
+      console.log("flag " + this.active);
+    },
+
+     mouseLeave: function() {
+                this.active = false;
+            }
+
     
   }
 }
 </script>
 
 <style lang="scss">
+
+.on {background-color: rgba(255, 255, 255, 0.9);}
+
 .navigation{
+    postion: relative;
+    
+    width: 100%;
+height: 120px;
 
 
    @include respond(tab-port) {
@@ -60,8 +85,7 @@ export default{
         }
 
 
-width: 100%;
-height: 50px;
+
 
    position: absolute;
    z-index: 3000;
@@ -101,7 +125,7 @@ height: 50px;
 
   &__nav{
 
-  
+  postion: relative;
 
  @include respond(tab-port) {
    transition: all 0.5s ease;
@@ -155,6 +179,13 @@ float: right;
 }
 
 &__item{
+
+
+    &:hover .navigation__item-sub{
+        display: block;
+
+
+    }
   
 display: inline-block;
 padding-right: 80px;
@@ -184,6 +215,18 @@ color: white;
       padding-top: 30px;
       
          
+        }
+
+        &-sub{
+
+display: none;
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	left: 0;
+
+           
+
         }
 
 }
