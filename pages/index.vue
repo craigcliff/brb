@@ -343,10 +343,15 @@
 
 <style lang="scss">
    .header{
-       height: 60vh;
+       height: 75vh;
 
        background-image: 
+       linear-gradient(
+            
+        rgba(0, 0, 0, 0.4),
+        rgba(255,255, 255, 0.1)),
         url(../assets/images/bg-1.jpg);
+        filter:contrast(150%);
     background-size: cover;
     background-position: top;
     position: relative;
@@ -356,8 +361,8 @@
             only screen and (min-width: 125em) {
         background-image: linear-gradient(
             to right bottom,
-        rgba(222, 221, 221, 0.3),
-        rgba(216,43, 43, 0.2)),
+      rgba(0, 0, 0, 0.3),
+        rgba(255,255, 255, 0.2)),
         url(../assets/images/bg-1.jpg);
     }
    

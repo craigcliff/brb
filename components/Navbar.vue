@@ -1,5 +1,5 @@
 <template>
-<div class="navigation" v-bind:class="{on: active}">
+<div class="navigation" v-bind:class="{'on': active}">
              <input type="checkbox" class="navigation__checkbox" id="nav-check" v-model="checked">
 
             <label for="nav-check" class="navigation__button"   >
@@ -11,10 +11,10 @@
             <nav  class="navigation__nav"  >
 
             
-                <ul  class="navigation__list" @click="toggleShow"  >
+                <ul  class="navigation__list" @click="toggleShow"   >
 
                  
-                  <li @mouseover="mouseOver " @mouseleave="mouseLeave" class="navigation__item"><nuxt-link class="navigation__link"  to="/">MENU</nuxt-link>
+                  <li @mouseover="mouseOver " @mouseleave="mouseLeave" class="navigation__item" ><nuxt-link   v-bind:class="[{'navigation__link': active}, 'navigation__link__default' ]"    to="/">MENU</nuxt-link>
                   
                    <div @mouseover="mouseOver" @mouseleave="mouseLeave" class = "navigation__item-sub">
 					  <div class="nav-menu__section-overview">
@@ -80,9 +80,9 @@
                   
                   </li>
 
-                  <li class="navigation__item"><nuxt-link class="navigation__link"  to="/about">ABOUT</nuxt-link></li>
-                  <li class="navigation__item"><nuxt-link class="navigation__link" to="/projects">LOCATION</nuxt-link></li>
-                  <li class="navigation__item"><nuxt-link class="navigation__link"  to="/contact">CONTACT</nuxt-link></li>
+                  <li class="navigation__item"><nuxt-link  v-bind:class="[{'navigation__link': active}, 'navigation__link__default' ]"   to="/about">ABOUT</nuxt-link></li>
+                  <li class="navigation__item"><nuxt-link  v-bind:class="[{'navigation__link': active}, 'navigation__link__default' ]"  to="/projects">LOCATION</nuxt-link></li>
+                  <li class="navigation__item"><nuxt-link  v-bind:class="[{'navigation__link': active}, 'navigation__link__default' ]"   to="/contact">CONTACT</nuxt-link></li>
                    
     
                     </ul>
@@ -157,6 +157,11 @@ export default{
 }
 
 .on {background-color: rgba(255, 255, 255, 0.9);}
+
+.link-color {
+color: white;
+
+}
 
 .navigation{
     postion: relative;
@@ -254,13 +259,15 @@ padding-left: 40px;
 
 &__list{
 
-  
+
 
 
 
 }
 
 &__item{
+
+   
     
     &:nth-child(-n+2){
         float: left;
@@ -269,7 +276,7 @@ padding-left: 40px;
     }
 
     &:nth-child(1){
-        padding-left: 80px;
+        margin-left: 80px;
         
 
     }
@@ -309,7 +316,7 @@ color: white;
     }
 
     &:nth-child(1){
-        padding-left: 0px;
+         margin-left: 0px;
         
 
     }
@@ -352,8 +359,28 @@ display: none;
 }
 
 &__link{
-color: white;
+color:black !important;
 text-decoration: none;
+
+ &:hover {
+
+        color:red !important;
+    }
+
+
+
+ &__default{
+
+     text-decoration: none;
+    color:white;
+
+ &:hover {
+
+        color:red;
+    }
+
+ }
+
 
 }
 
@@ -424,4 +451,10 @@ text-decoration: none;
     
   
 }
+
+//.navigation__item:first-child a:hover + .navigation__item:last-child a  {
+//color: blue;
+//
+//}
+
 </style>
