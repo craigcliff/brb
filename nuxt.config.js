@@ -23,9 +23,7 @@ module.exports = {
      */
     head: {
         title: 'brb',
-        script: [
-            { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js' }
-        ],
+        
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
