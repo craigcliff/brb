@@ -297,11 +297,22 @@ color: white;
           display: block;
           text-align: center;
        padding: 0;
-      padding-top: 30px;
+      padding-top: 20px;
          margin-top:25px;
          padding-bottom: 10px;
          float: none;
          
+         &:nth-child(-n+2){
+        float: none;
+        
+
+    }
+
+    &:nth-child(1){
+        padding-left: 0px;
+        
+
+    }
         
          
        
@@ -310,9 +321,20 @@ color: white;
            display: block;
           text-align: center;
       padding: 0;
-      padding-top: 30px;
+      padding-top: 20px;
             float: none;
          
+         &:nth-child(-n+2){
+        float: none;
+        
+
+    }
+
+    &:nth-child(1){
+        padding-left: 0px;
+        
+
+    }
         }
 
         &-sub{
