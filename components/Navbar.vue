@@ -254,23 +254,27 @@ padding-left: 40px;
 
 &__list{
 
-float: right;
+  
 
- @include respond(tab-port) {
-          float: none;
-          
-         
-          
-        
-        }
-        @include respond(phone) {
-          float: none;
-        }
 
 
 }
 
 &__item{
+    
+    &:nth-child(-n+2){
+        float: left;
+        
+
+    }
+
+    &:nth-child(1){
+        padding-left: 80px;
+        
+
+    }
+
+float: right;
 
 
     &:hover .navigation__item-sub{
@@ -296,6 +300,7 @@ color: white;
       padding-top: 30px;
          margin-top:25px;
          padding-bottom: 10px;
+         float: none;
          
         
          
@@ -306,7 +311,7 @@ color: white;
           text-align: center;
       padding: 0;
       padding-top: 30px;
-      
+            float: none;
          
         }
 
