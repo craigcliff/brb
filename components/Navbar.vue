@@ -7,7 +7,15 @@
             </label>
    
                     
-<div class="navigation__logo">logo</div>
+<div class="navigation__logo">
+    <img src="../assets/images/logo-light.png" width="200" height="110" />
+    
+
+</div>
+
+ 
+
+
             <nav  class="navigation__nav"  >
 
             
@@ -242,6 +250,8 @@ height: 500px;
   }
 
    &__logo{
+       background-image: url(../assets/images/logo-light.png) no-repeat fixed center;
+      
 float: left;
 padding-top: 10px;
 padding-left: 40px;
@@ -259,7 +269,7 @@ padding-left: 40px;
 
 &__list{
 
-
+margin-top: 25px;
 
 
 
