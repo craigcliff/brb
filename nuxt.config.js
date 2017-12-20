@@ -6,6 +6,7 @@ module.exports = {
         // provide path to the file with resources
 
         ['nuxt-sass-resources-loader', [
+            
             resolve(__dirname, 'assets/css/abstracts/_variables.scss'),
             resolve(__dirname, 'assets/css/abstracts/_mixins.scss'),
             resolve(__dirname, 'assets/css/base/_typography.scss'),
@@ -28,10 +29,13 @@ module.exports = {
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: 'Beers Ribs and Burgers fictional restaurant' }
         ],
+
+        css: [
+            '~/assets/css/fonts.min.css'
+        ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-            // { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css' },
-            // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700' }
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,900' }
         ]
     },
     /*

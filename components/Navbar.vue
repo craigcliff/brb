@@ -14,7 +14,7 @@
                 <ul  class="navigation__list" @click="toggleShow"  >
 
                  
-                  <li @mouseover="mouseOver " @mouseleave="mouseLeave" class="navigation__item"><nuxt-link class="navigation__link"  to="/">Menu</nuxt-link>
+                  <li @mouseover="mouseOver " @mouseleave="mouseLeave" class="navigation__item"><nuxt-link class="navigation__link"  to="/">MENU</nuxt-link>
                   
                    <div @mouseover="mouseOver" @mouseleave="mouseLeave" class = "navigation__item-sub">
 					  <div class="nav-menu__section-overview">
@@ -54,7 +54,7 @@
 
         <nav class="nav-menu__sub-nav-external">
     
-<a class="button -secondary - -small"
+<a class="button-secondary--small"
   data-text="Nutritional Facts"
   role="button"
   target="_blank"
@@ -63,7 +63,7 @@
 </a>
 
     
-<a class="button -secondary - -small"
+<a class="button-secondary--small"
   data-text="Allergen Guide"
   role="button"
   target="_blank"
@@ -80,9 +80,9 @@
                   
                   </li>
 
-                  <li class="navigation__item"><nuxt-link class="navigation__link"  to="/about">About</nuxt-link></li>
-                  <li class="navigation__item"><nuxt-link class="navigation__link" to="/projects">Projects</nuxt-link></li>
-                  <li class="navigation__item"><nuxt-link class="navigation__link"  to="/contact">Contact</nuxt-link></li>
+                  <li class="navigation__item"><nuxt-link class="navigation__link"  to="/about">ABOUT</nuxt-link></li>
+                  <li class="navigation__item"><nuxt-link class="navigation__link" to="/projects">LOCATION</nuxt-link></li>
+                  <li class="navigation__item"><nuxt-link class="navigation__link"  to="/contact">CONTACT</nuxt-link></li>
                    
     
                     </ul>
@@ -283,7 +283,8 @@ display: inline-block;
 padding-right: 80px;
 margin-top: 20px;
 text-decoration: none;
-font-weight: bold;
+font-weight: 900;
+font-size: 15px;
 color: white;
 
 
@@ -325,6 +326,7 @@ display: none;
 
 &__link{
 color: white;
+text-decoration: none;
 
 }
 

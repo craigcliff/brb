@@ -3,8 +3,7 @@
 <div class = "main-index">
 <header class="header">
  <div class = "header__bg1" > </div>
-  <div class = "header__bg2"> </div>
-        <div class = "header__bg3"> </div>
+  
 
 <div class="header__text-box">
                 <h1 class="heading-primary" 
@@ -344,12 +343,9 @@
 
 <style lang="scss">
    .header{
-       height: 85vh;
+       height: 60vh;
 
-       background-image: linear-gradient(
-        to right bottom,
-        rgba(222, 221, 221, 0.3),
-        rgba(216,43, 43, 0.2)),
+       background-image: 
         url(../assets/images/bg-1.jpg);
     background-size: cover;
     background-position: top;
