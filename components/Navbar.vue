@@ -7,9 +7,9 @@
             </label>
    
                     
-<div class="navigation__logo">
-    <img src="../assets/images/logo-light.png" width="200" height="110" />
-    
+<div  class="navigation__logo">
+    <img v-if='this.active == false' src="../assets/images/logo-light.png" width="200" height="110" />
+    <img v-else src="../assets/images/logo-dark.png" width="200" height="110" />
 
 </div>
 
