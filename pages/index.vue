@@ -92,6 +92,8 @@ text-decoration: none;
 padding:15px 40px;
 display: inline-block;
 border-radius: 100px;
+border-style: solid;
+border-color: #fff;
 
 }
 
@@ -105,7 +107,7 @@ border-radius: 100px;
 }
 
 .btn-white {
-background-color: #fff;
+background-color: #rgba(255, 0, 0, 0.4);
 color: #777;
 
 
