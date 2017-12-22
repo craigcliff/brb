@@ -567,17 +567,21 @@
     
     .navigation {
     
-        postion: relative;
+       
     
         width: 100%;
     
         height: 500px;
+
+         position: absolute;
+    
+        z-index: 3000;
     
         @include respond(tab-port) {
     
-            background-color: rgba(222, 221, 221, 0.3);
+          
     
-       
+       height: 100vh;
     
             z-index: 2;
     
@@ -585,16 +589,14 @@
     
         @include respond(phone) {
     
-            background-color: rgba(222, 221, 221, 0.3);
+height: 100vh;
     
            
             z-index: 2;
     
         }
     
-        position: absolute;
-    
-        z-index: 3000;
+       
     
         &__checkbox {
     
@@ -764,9 +766,9 @@
     
                 padding: 0;
     
-                padding-top: 20px;
+                
     
-                margin-top: 25px;
+                 margin-top: 120px;
     
                 padding-bottom: 10px;
     
@@ -793,8 +795,10 @@
                 text-align: center;
     
                 padding: 0;
+
+                margin-top: 100px;
     
-                padding-top: 20px;
+                
     
                 float: none;
     
@@ -860,7 +864,7 @@
     
             @include respond(tab-port) {
     
-                background-color: rgba(0, 0, 0, 0.3);
+                background-color: rgba(0, 0, 0, 0.9);
     
                 visibility: visible;
     
@@ -872,7 +876,7 @@
     
             @include respond(phone) {
     
-                background-color: rgba(0, 0, 0, 0.3);
+                background-color: rgba(0, 0, 0, 0.9);
     
                 visibility: visible;
     
